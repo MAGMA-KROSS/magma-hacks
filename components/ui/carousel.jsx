@@ -134,8 +134,8 @@ function CarouselItem({
       aria-roledescription="slide"
       data-slot="carousel-item"
       className={cn(
-        "min-w-0 shrink-0 grow-0 basis-full",
-        orientation === "horizontal" ? "pl-4" : "pt-4",
+        " md:min-w-0 shrink-0 grow-0 basis-full",
+        orientation === "horizontal" ? "pl-4 lg:pl-2" : "pt-4",
         className
       )}
       {...props} />
@@ -161,7 +161,7 @@ function CarouselPrevious({
       disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}>
-      <ArrowLeft />
+      <ArrowLeft className="p-auto"/>
       <span className="sr-only">Previous slide</span>
     </Button>
   );

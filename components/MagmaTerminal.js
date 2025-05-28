@@ -52,7 +52,7 @@ const codeString4 = `
 
 export default function MagmaTerminal() {
     return (
-        <div className="relative h-screen w-full flex items-center justify-center">
+        <div className="relative w-full flex items-center justify-center">
             
 
             <div className="relative z-10 terminal bg-black bg-opacity-70 mb-5 backdrop-blur-md rounded-xl p-8 shadow-2xl max-w-3xl w-11/12 border border-gray-700">
