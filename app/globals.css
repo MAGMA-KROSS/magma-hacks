@@ -43,7 +43,7 @@
 
 :root {
   --radius: 0.5rem;
-  --background: oklch(1 0 0);
+  --background: oklch(0.98 0 0);
   --foreground: oklch(0.141 0.005 285.823);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.141 0.005 285.823);
@@ -77,7 +77,7 @@
 }
 
 .dark {
-  --background: oklch(0.141 0.005 285.823);
+  --background: oklch(0.2 0.005 285.823);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.21 0.006 285.885);
   --card-foreground: oklch(0.985 0 0);
@@ -153,11 +153,70 @@ html {
   scrollbar-color: #ff4e00 #0e0e0e;
 }
 
+.terminal::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.terminal::-webkit-scrollbar-track {
+  background: #0e0e0e;
+  border-radius: 10px;
+}
+
+.terminal::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #8B0000, #ec9f05);
+  border-radius: 10px;
+  border: 2px solid #0e0e0e;
+  background-clip: padding-box;
+}
+
+/* Firefox fallback */
+.terminal {
+  scrollbar-color: #8B0000 #0e0e0e;
+  scrollbar-width: thin;
+}
+
+
 body{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   overflow-x: hidden;
 }
 
+
+.animate-pulse-gradient {
+  animation: pulse-gradient 8s infinite ease-in-out;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #333;
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+@keyframes pulse-gradient {
+  0% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+}
 
 .animate-pulse-gradient {
   animation: pulse-gradient 8s infinite ease-in-out;
